@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Registration</h1>
+        <div class="form-box">
+            <h2>New User Registration</h2>
+            <form id="registrationForm" action="register.php" method="POST">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button onclick="location.href='http://127.0.0.1:5500/food/user.html'" type="submit">Register</button>
+            </form>
+            <p>Already a user? <a href="http://127.0.0.1:5500/food/loginuser.html">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const registrationForm = document.getElementById('registrationForm');
+            registrationForm.addEventListener('submit', function(event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Redirect to the specified URL (replace 'your_redirect_url' with the actual URL)
+                window.location.href = 'http://127.0.0.1:5500/food/user.html';
+            });
+        });
+    </script>
+</body>
+</html>

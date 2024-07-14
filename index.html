@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarian Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, Librarian!</h1>
+
+        <!-- Form to add a new book -->
+        <form id="addBookForm">
+            <label for="bookTitle">Title:</label>
+            <input type="text" id="bookTitle" name="bookTitle" required>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+
+            <label for="isbn">ISBN:</label>
+            <input type="text" id="isbn" name="isbn" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="image">Image URL:</label>
+            <input type="url" id="image" name="image" required>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+            
+            <button type="submit">Add Book</button>
+        </form>
+
+        <!-- Table to display existing books -->
+        <h2>Current Books</h2>
+        <table id="bookTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="bookList">
+                <!-- Books will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <!-- Log table -->
+        <h2>Action Log</h2>
+        <table id="logTable">
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="logList">
+                <!-- Logs will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
